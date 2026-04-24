@@ -81,4 +81,4 @@ if st.button("Calculate Scientific"):
     elif operation_sci == "Tan":
         result = math.tan(math.radians(value))
 
-    st.success(f"Result: {result:,3f}")
+    st.success(f"Result: {result:,.3f}")
