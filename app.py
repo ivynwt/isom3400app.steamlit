@@ -33,4 +33,4 @@ if st.button("Click Me"):
     #st.success()
     st.success("Operation completed successfully!")
 else:
-  st.wrtite("Changes not yet comfirm.")
+  st.write("Changes not yet comfirm.")
