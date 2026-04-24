@@ -23,7 +23,7 @@ if st.button("Submit"):
     # Display entered values
     st.write(f"Your monthly sales target is {sales} in Region {region}.")
     # Success message
-    st.success("Operation completed successfully!")
+    st.success("Dashboard updated successfully!")
     # Extra message for ambitious target
     if sales > 100000:
         st.write("Great! You have set an ambitious target!")
