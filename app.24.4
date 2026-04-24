@@ -10,7 +10,7 @@ st.write("Please enter the monthly sales target and select the region.")
 # Number input for sales target
 sales = st.number_input("Enter Monthly Sales Target (in USD):",
                       min_value=0,
-                      max_value=50000,
+                      max_value=999999999,
                       value=50000)
 
 # Dropdown for region selection
@@ -24,6 +24,6 @@ if st.button("Submit"):
     st.write(f"Your monthly sales target is {sales} in Region {region}.")
     # Success message
     st.success("Operation completed successfully!")
-
     # Extra message for ambitious target
-
+    if sales > 100000:
+        st.write("Great! You have set an ambitious target!")
