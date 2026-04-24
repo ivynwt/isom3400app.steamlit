@@ -28,9 +28,8 @@ option = st.selectbox("Choose your favorite color:",
 st.write(f"You selected: {option}")
 
 #st.button()
-if st.button("Click Me"):
+if st.button("Submit"):
     st.write("Button clicked!")
     #st.success()
     st.success("Operation completed successfully!")
-else:
-  st.write("Changes not yet comfirm.")
+
