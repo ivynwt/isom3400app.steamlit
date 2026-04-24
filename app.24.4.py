@@ -16,7 +16,7 @@ sales = st.number_input("Enter Monthly Sales Target (in USD):",
 # Dropdown for region selection
 region = st.selectbox("Select Region:",
                       ["North", "South", "East", "West"])
-st.write(f"You selected: {option}")
+st.write(f"You selected: {region}")
 
 # Submit button
 if st.button("Submit"):
