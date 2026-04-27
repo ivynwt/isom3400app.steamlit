@@ -56,7 +56,7 @@ with tab1_4:
     st.write("- To be confirm.")
 
 with st.expander("More Information"):
-    tab2_1, tab2_2 = ["Sales Data", "Customer insight"]
+    tab2_1, tab2_2 = st.tabs(["Sales Data", "Customer insight"])
     with tab2_1:
         st.write("Additional details on data collection methods.")
     with tab2_2:
