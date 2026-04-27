@@ -65,7 +65,7 @@ operation_sci = st.selectbox("Choose scientific operation", ["Square Root", "Pow
 
 if operation_sci == "Power":
   value = st.number_input("Enter value", value=0.0)
-  power = st.number_input("Enter power (if applicable)", value=2.0)
+  power = st.number_input("Enter power", value=2.0)
 else:
   value = st.number_input("Enter value", value=0.0)
 
