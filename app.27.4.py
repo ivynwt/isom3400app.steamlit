@@ -56,9 +56,11 @@ with tab1_4:
     st.write("- To be confirm.")
 
 with st.expander("More Information"):
-    tab
-    st.write("Additional details on data collection methods.")
-    st.write("Data was collected through surveys and sales reports.")
+    tab2_1, tab2_2 = ["Sales Data", "Customer insight"]
+    with tab2_1:
+        st.write("Additional details on data collection methods.")
+    with tab2_2:
+        st.write("Data was collected through surveys and sales reports.")
 
 # Dynamic Containers
 placeholder = st.empty()
