@@ -1,3 +1,4 @@
+pip install streamlit_option_menu
 import streamlit as st
 import time
 
@@ -84,7 +85,7 @@ for insight in business_insights:
     placeholder.write(insight)
     time.sleep(2)
 
-pip install streamlit_option_menu
+
 st.title("Section 2: Menu")
 import streamlit as st
 from streamlit_option_menu import option_menu
