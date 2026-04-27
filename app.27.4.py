@@ -23,7 +23,7 @@ with col4:
     st.write("Revenue: $1.6M")
 
 # Tabs Layout
-tab1, tab2, tab3 = st.tabs(["Sales Data", "Customer Insights", "Market Trends"])
+tab1, tab2, tab3, tab4= st.tabs(["Sales Data", "Customer Insights", "Market Trends", "Market Performance",])
 with tab1:
     st.write("Content for Sales Data")
     sales_data = {
@@ -52,6 +52,8 @@ with tab3:
     }
     for trend, status in market_trends.items():
         st.write(f"{trend}: {status}")
+with tab4:
+    st.write("- To be confirm.")
 
 with st.expander("More Information"):
     st.write("Additional details on data collection methods.")
