@@ -23,8 +23,8 @@ with col4:
     st.write("Revenue: $1.6M")
 
 # Tabs Layout
-tab1, tab2, tab3, tab4= st.tabs(["Sales Data", "Customer Insights", "Market Trends", "Market Performance",])
-with tab1:
+tab1.1, tab1.2, tab1.3, tab1.4= st.tabs(["Sales Data", "Customer Insights", "Market Trends", "Market Performance",])
+with tab1.1:
     st.write("Content for Sales Data")
     sales_data = {
         "Q1 2024": "$1.2M",
@@ -34,7 +34,7 @@ with tab1:
     }
     for quarter, revenue in sales_data.items():
         st.write(f"{quarter}: {revenue}")
-with tab2:
+with tab1.2:
     st.write("Content for Customer Insights")
     customer_feedback = [
         "Great service!",
@@ -43,7 +43,7 @@ with tab2:
     ]
     for feedback in customer_feedback:
         st.write(f"- {feedback}")
-with tab3:
+with tab1.3:
     st.write("Content for Market Trends")
     market_trends = {
         "Eco-friendly products": "Increasing demand",
@@ -52,10 +52,11 @@ with tab3:
     }
     for trend, status in market_trends.items():
         st.write(f"{trend}: {status}")
-with tab4:
+with tab1.4:
     st.write("- To be confirm.")
 
 with st.expander("More Information"):
+    tab
     st.write("Additional details on data collection methods.")
     st.write("Data was collected through surveys and sales reports.")
 
