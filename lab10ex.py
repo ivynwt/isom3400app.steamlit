@@ -1,5 +1,8 @@
 import streamlit as st
-# Title
+import pandas as pd
+import os
+import csv
+
 st.title("Contact Info Collector")
 
 # Form
@@ -14,9 +17,19 @@ with st.form(key="my_form"):
         if first_name.strip() == "" or last_name.strip() == "":
             st.error("First Name and Last Name cannot be empty.")
         else:
-            # Append to contacts.csv
-            with open("contacts.csv", "a") as f:
-                f.write(f"{first_name},{last_name},{fav_number}\n")
+            # If file doesn't exist, create with header
+            file_exists = os.path.isfile("contacts.csv")
+            with open("contacts.csv", "a", newline="") as f:
+                writer = csv.writer(f)
+                if not file_exists:
+                    writer.writerow(["First Name", "Last Name", "Favourite Number"])
+                writer.writerow([first_name, last_name, fav_number])
             st.success("Contact registered successfully!")
+
+# Display contacts.csv contents
+if os.path.exists("contacts.csv"):
+    df = pd.read_csv("contacts.csv")
+    st.subheader("Registered Contacts")
+    st.table(df)
 
 
