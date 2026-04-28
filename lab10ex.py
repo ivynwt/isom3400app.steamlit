@@ -19,8 +19,4 @@ with st.form(key="my_form"):
                 f.write(f"{first_name},{last_name},{fav_number}\n")
             st.success("Contact registered successfully!")
 
-# Display contacts.csv contents
-if os.path.exists("contacts.csv"):
-    df = pd.read_csv("contacts.csv", names=["First Name", "Last Name", "Favourite Number"])
-    st.subheader("Registered Contacts")
-    st.table(df)
+
