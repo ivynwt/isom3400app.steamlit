@@ -1,4 +1,4 @@
-
+import streamlit as st
 # Title
 st.title("Contact Info Collector")
 
