@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
 #1
 st.title("This is title.")
@@ -8,6 +9,8 @@ st.write("This is content written.")
 st.write("**Bold Text** and *Italic Text*")
 st.markdown("**Bold Text - md** and *Italic Text - md*")
 st.success("Operation completed successfully!")
+
+
 
 #2
 # Columns Layout
@@ -56,3 +59,26 @@ with tab3:
 with st.expander("More Information"):
     st.write("Additional details on data collection methods.")
     st.write("Data was collected through surveys and sales reports.")
+
+
+
+#3
+with st.sidebar:
+    selected=option_menu(
+        menu_title = "Menu",
+        options = ["Home", "About", "Contact"],
+        icons = ["1-circle-fill",
+                 "2-circle-fill",
+                 "3-circle-fill"],
+        menu_icon= "emoji-smile-fill",
+        default_index=0,
+    )
+
+if selected == "Home":
+    st.title(f"Welcome to the {selected} page.")
+
+if selected == "About":
+    st.title(f"Welcome to the {selected} page.")
+
+if selected == "Contact":
+    st.title(f"Welcome to the {selected} page.")
