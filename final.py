@@ -103,3 +103,10 @@ st.table(df)
 st.dataframe(df.style.format({'Sales': '${:,.0f}', 'Customers': '{:,.0f}'}))
 
 #5
+df2 = pd.DataFrame({
+    "Month": ["Jan", "Feb", "Mar", "Apr"],
+    "Sales": [100, 120, 90, 150],
+    "Profit": [20, 30, 10, 40]
+})
+
+st.line_chart(data=df2[["Sales", "Profit"]], height=400, use_container_width=True)
